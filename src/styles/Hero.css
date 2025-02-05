@@ -1,63 +1,115 @@
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('../images/background_img.jpg'); /* Add your image path here */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-    font-family: 'Poppins', sans-serif;
-    position: relative;
-    overflow: hidden;
-    padding: 0 20px;
-  }
-  
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;  /* Align text to the left */
-    margin-right: 50px;  /* Create space between text and image */
-    margin-top: -50px;
+  display: flex;
+  justify-content: space-between; /* Space between text and image */
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/background_img.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+  padding: 0 5%;
 }
+
+.hero-content {
+  flex: 1; /* Takes half of the space */
+  max-width: 50%; /* Ensures it doesn't exceed half */
+  text-align: left; /* Left align the content */
+}
+
+h1 {
+  font-size: 5rem; /* Bigger font */
+  margin-bottom: 1.5rem;
+  text-align: left; /* Ensure 'hi' starts from the left */
+}
+
+
+.highlight {
+  color: #e63946;
+}
+
+.animated-text {
+  font-size: 3rem; /* Bigger text */
+  /* font-weight: bold; */
+  margin-bottom: 2rem;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: 'Times new roman', sans-serif;
+
   
+}
+
+.hero-image {
+  flex: 1; /* Takes half of the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 90%;  /* Bigger image */
+  max-width: 500px; /* Limit max size */
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 40px white; /* Glowing effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hero-image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 60px #66fcf1; /* Brighter glow on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    height: auto;
+  }
+
+  .hero-content {
+    max-width: 80%;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .hero-image img {
+    width: 80%;
+  }
+
   h1 {
-    font-size: 4rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
   }
-  
-  .highlight {
-    color: #e63946;
-  }
-  
+
   .animated-text {
+    font-size: 2.2rem;
+    text-align: left; 
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content {
+    max-width: 100%;
+  }
+
+  h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 1.5s steps(20, end), blink 0.7s step-end infinite;
   }
-  
-  @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+
+  .animated-text {
+    font-size: 1.8rem;
   }
-  
-  
-  .btn {
-    padding: 0.75rem 1.5rem;
-    background-color: #e63946;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    transition: background 0.3s ease-in-out;
+
+  .hero-image img {
+    width: 70%;
   }
-  
-  .btn:hover {
-    background-color: #d62839;
-  }
-  
+}

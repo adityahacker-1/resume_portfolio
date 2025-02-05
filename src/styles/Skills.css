@@ -41,8 +41,8 @@
   
   .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-  }
+    box-shadow: 0 0 60px #66fcf1, 0 0 80px #66fcf1; /* Glowing effect */
+}
   
   .skill-icon {
     font-size: 2.5rem;

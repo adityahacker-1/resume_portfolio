@@ -60,6 +60,8 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     background-color: #f5e1b5; /* Bright contrast color */
     color: #222;
+    box-shadow: 0 0 30px #66fcf1; /* Brighter glow on hover */
+
 }
 
 /* Underlay gradient effect on hover */
