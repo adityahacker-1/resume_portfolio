@@ -1,0 +1,11 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5dc; /* Creamish background color */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }

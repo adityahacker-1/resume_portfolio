@@ -1,0 +1,164 @@
+.skills {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: white;
+    opacity: 0; /* Start invisible */
+    transition: opacity 2s ease; /* Slower transition */
+  }
+  
+  .skills.fade-in {
+    opacity: 1; /* Fade in when in view */
+  }
+  
+  .skills.fade-out {
+    opacity: 0; /* Fade out when out of view */
+  }
+  
+  .skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100px;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    color: #333; /* Default icon color */
+    transition: color 0.3s ease;
+  }
+  
+  .skill-item:hover .skill-icon {
+    color: inherit; /* Use the default brand color on hover */
+  }
+  
+  .skill-item span {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Specific hover colors for each icon */
+  .skill-item:hover .fa-html5 {
+    color: #e34c26; /* HTML5 brand color */
+  }
+  
+  .skill-item:hover .fa-css3-alt {
+    color: #264de4; /* CSS3 brand color */
+  }
+  
+  .skill-item:hover .fa-js {
+    color: #f0db4f; /* JavaScript brand color */
+  }
+  
+  .skill-item:hover .fa-react {
+    color: #61dbfb; /* React brand color */
+  }
+  
+  .skill-item:hover .di-mysql {
+    color: #00758f; /* MySQL brand color */
+  }
+  
+  .skill-item:hover .fa-node-js {
+    color: #68a063; /* Node.js brand color */
+  }
+  
+  .skill-item:hover .fa-python {
+    color: #3776ab; /* Python brand color */
+  }
+  
+  .skill-item:hover .si-flask {
+    color: #000000; /* Flask brand color */
+  }
+  
+  .skill-item:hover .fa-docker {
+    color: #0db7ed; /* Docker brand color */
+  }
+  
+  .skill-item:hover .fa-git-alt {
+    color: #f34f29; /* Git brand color */
+  }
+  
+  .skill-item:hover .fa-aws {
+    color: #ff9900; /* AWS brand color */
+  }
+  
+  .skill-item:hover .si-jquery {
+    color: #0769ad; /* jQuery brand color */
+  }
+  
+  .skill-item:hover .si-opencv {
+    color: #5c3ee8; /* OpenCV brand color */
+  }
+  
+  .skill-item:hover .si-pandas {
+    color: #150458; /* Pandas brand color */
+  }
+  
+  .skill-item:hover .si-numpy {
+    color: #4d77cf; /* NumPy brand color */
+  }
+  .skill-item:hover .si-pytorch {
+    color: #ee4c2c; /* pytorch brand color */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .skills-list {
+      gap: 1.5rem;
+    }
+  
+    .skill-item {
+      width: 80px;
+      padding: 0.75rem;
+    }
+  
+    .skill-icon {
+      font-size: 2rem;
+    }
+  
+    .skill-item span {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-list {
+      gap: 1rem;
+    }
+  
+    .skill-item {
+      width: 70px;
+      padding: 0.5rem;
+    }
+  
+    .skill-icon {
+      font-size: 1.75rem;
+    }
+  
+    .skill-item span {
+      font-size: 0.8rem;
+    }
+  }

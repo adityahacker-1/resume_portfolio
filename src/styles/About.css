@@ -1,0 +1,66 @@
+.about {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: white;
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.about.slide-up {
+    opacity: 1;
+    transform: translateY(0); /* Slide up */
+}
+
+.about.slide-down {
+    opacity: 0;
+    transform: translateY(50px); /* Slide down when out of view */
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* About content container */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Styling for main list */
+.about-list {
+    margin-top: 1rem;
+    padding-left: 20px;
+}
+
+.about-list > li {
+    margin-bottom: 0.75rem;
+    list-style-type: disc; /* Main bullet points */
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styling for nested lists */
+.about-list ul {
+    margin-top: 0.5rem;
+    padding-left: 20px;
+}
+
+.about-list ul li {
+    list-style-type: circle; /* Nested bullet points */
+    font-weight: normal;
+    color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        font-size: 1rem;
+    }
+}

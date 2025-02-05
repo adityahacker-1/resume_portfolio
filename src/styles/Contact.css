@@ -1,0 +1,89 @@
+.contact {
+    padding: 4rem 2rem;
+    background-image: url('../images/background_img.jpg'); /* Add your image path here */
+    text-align: center;
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Start slightly below */
+    transition: opacity 2s ease, transform 2s ease; /* Slower transition */
+}
+  
+.contact.slide-up {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to original position */
+}
+
+.contact.slide-down {
+    opacity: 0;
+    transform: translateY(50px); /* Slide down when out of view */
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white; /* Default color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect - change color on hover */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Brand colors appear on hover */
+.social-icons a:hover .fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.social-icons a:hover .fa-github {
+    color: #ffffff; /* GitHub white */
+}
+
+.social-icons a:hover .fa-instagram {
+    color: #E4405F; /* Instagram pink-red */
+}
+
+.social-icons a:hover .fa-facebook {
+    color: #1877F2; /* Facebook blue */
+}
+
+.icon {
+    font-size: 3rem; /* Icon size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .icon {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .icon {
+        font-size: 2rem;
+    }
+}
