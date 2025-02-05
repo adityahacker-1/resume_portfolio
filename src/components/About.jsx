@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import '../styles/About.css';
+import adityaImage from "../images/aditya_baniya.jpg";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -10,6 +11,9 @@ const About = () => {
   return (
     <section id="about" className={`about ${inView ? 'slide-up' : 'slide-down'}`} ref={ref}>
       <h2>About Me</h2>
+      <div className="image-container">
+        <img src={adityaImage} alt="Aaditya Baniya" className="hero-image" />
+      </div>
       <div className="about-content">
         <p>I am a sophomore undergraduate research assistant at Texas State University, pursuing a Bachelor's degree in Computer Science with a minor in Mathematics. My expertise includes:</p>
         <ul className="about-list">

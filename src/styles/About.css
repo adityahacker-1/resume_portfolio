@@ -1,10 +1,11 @@
 .about {
     padding: 4rem 2rem;
     text-align: center;
-    background-color: white;
+    background-color: #f5f5dc;
     opacity: 0; /* Start invisible */
     transform: translateY(50px); /* Start slightly below */
     transition: opacity 2s ease, transform 2s ease;
+    font-family: 'Times New Roman', serif; /* Set the font to Times New Roman */
 }
 
 .about.slide-up {
@@ -17,11 +18,28 @@
     transform: translateY(50px); /* Slide down when out of view */
 }
 
+.image-container {
+    position: relative;
+    width: 450px; /* Bigger size */
+    height: 450px;
+    border-radius: 50%; /* Makes it a perfect circle */
+    overflow: hidden;
+    margin-top: -50px; /* Moves the image slightly higher */
+    box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2); /* Soft glow effect */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the circle */
+}
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     font-weight: bold;
     color: #333;
+    font-family: 'Times New Roman', serif; /* Times New Roman font for heading */
 }
 
 /* About content container */
@@ -31,6 +49,7 @@
     font-size: 1.2rem;
     line-height: 1.8;
     text-align: left;
+    font-family: 'Times New Roman', serif; /* Times New Roman font for content */
 }
 
 /* Styling for main list */
@@ -44,6 +63,7 @@
     list-style-type: disc; /* Main bullet points */
     font-weight: bold;
     color: #333;
+    font-family: 'Times New Roman', serif; /* Times New Roman font for list items */
 }
 
 /* Styling for nested lists */
@@ -56,11 +76,45 @@
     list-style-type: circle; /* Nested bullet points */
     font-weight: normal;
     color: #666;
+    font-family: 'Times New Roman', serif; /* Times New Roman font for nested list items */
+}
+
+/* Image container styling */
+.image-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5dc; /* Light background color around the image */
+    border-radius: 50%; /* Circular background */
+    padding: 10px; /* Space between image and background */
+    width: 320px; /* Ensure it fits with the image */
+    height: 320px; /* Ensure it fits with the image */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Styling for the image */
+.hero-image {
+    max-width: 100%; /* Image takes full width of its container */
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .about-content {
         font-size: 1rem;
+    }
+
+    /* Adjust image size for smaller screens */
+    .hero-image {
+        max-width: 150px;
+    }
+
+    /* Adjust image container size for smaller screens */
+    .image-container {
+        width: 200px;
+        height: 200px;
     }
 }

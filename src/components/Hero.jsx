@@ -1,5 +1,4 @@
 import React from 'react';
-import adityaImage from "../images/aditya_baniya.jpg";
 import { TypeAnimation } from 'react-type-animation';
 import '../styles/Hero.css';
 
@@ -28,9 +27,7 @@ const Hero = () => {
           className="animated-text"
         />
       </div>
-      <div className="image-container">
-        <img src={adityaImage} alt="Aaditya Baniya" className="hero-image" />
-      </div>
+      
     </section>
   );
 };
