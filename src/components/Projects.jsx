@@ -7,6 +7,8 @@ const Projects = () => {
   const [ref2, inView2] = useInView({ threshold: 0.1 });
   const [ref3, inView3] = useInView({ threshold: 0.1 });
   const [ref4, inView4] = useInView({ threshold: 0.1 });
+  const [ref5, inView5] = useInView({ threshold: 0.1 });
+
 
   return (
     <section id="projects" className="projects">
@@ -14,7 +16,12 @@ const Projects = () => {
       <div className="project-list">
         {/* Project 1 */}
         
-
+        <a href="https://adeanetfli.netlify.app/" target="_blank" rel="noopener noreferrer" 
+           ref={ref5} className={`project-item ${inView5 ? 'slide-in-left' : 'slide-out-left'}`}>
+          <h3>Netflix Clone</h3>
+          <p>Has HTML, Vanilla CS and JS and some design skills.</p>
+        </a>
+        
         {/* Project 2 */}
         <a href="https://github.com/adityahacker-1/market_web" target="_blank" rel="noopener noreferrer" 
            ref={ref2} className={`project-item ${inView2 ? 'slide-in-left' : 'slide-out-left'}`}>
@@ -41,6 +48,8 @@ const Projects = () => {
           <h3>Drum</h3>
           <p>Playing with Javascript</p>
         </a>
+
+        
       </div>
     </section>
   );
